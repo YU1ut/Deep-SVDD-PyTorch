@@ -51,7 +51,7 @@ from datasets.main import load_dataset
               help='Weight decay (L2 penalty) hyperparameter for autoencoder objective.')
 @click.option('--n_jobs_dataloader', type=int, default=0,
               help='Number of workers for data loading. 0 means that the data will be loaded in the main process.')
-@click.option('--normal_class', type=click.INT, nargs=-1,
+@click.option('--normal_class', type=click.INT, nargs='+',
               help='Specify the normal class of the dataset (all other classes are considered anomalous).')
 def main(dataset_name, net_name, xp_path, data_path, load_config, load_model, objective, nu, device, seed,
          optimizer_name, lr, n_epochs, lr_milestone, batch_size, weight_decay, pretrain, ae_optimizer_name, ae_lr,
