@@ -86,6 +86,7 @@ def main(dataset_name, net_name, xp_path, data_path, load_config, load_model, ob
     logger.info('Export path is %s.' % xp_path)
 
     logger.info('Dataset: %s' % dataset_name)
+    normal_class = [int(item) for item in normal_class]
     logger.info(normal_class)
     logger.info('Network: %s' % net_name)
 
